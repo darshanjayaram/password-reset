@@ -11,14 +11,12 @@ const app = express();
 
 // Middleware
 app.use(cors({ 
-  origin: 'https://password-reset-m0hg.onrender.com',
+  origin: 'https://sparkling-meerkat-2309f3.netlify.app',
   credentials: true 
 }));
 
 app.use(bodyParser.json());
 
-// to fix the cors issues
-app.use(cors());
 // Routes
 app.use('/auth', apiRoutes);
 
