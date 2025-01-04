@@ -17,6 +17,8 @@ app.use(cors({
 
 app.use(bodyParser.json());
 
+// to fix the cors issues
+app.use(cors());
 // Routes
 app.use('/auth', apiRoutes);
 

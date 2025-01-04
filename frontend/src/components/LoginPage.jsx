@@ -10,7 +10,7 @@ const LoginPage = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/auth/login', { email, password });
+      const response = await axios.post('https://password-reset-m0hg.onrender.com/auth/login', { email, password });
       // Debugging line to check response
       console.log('Server Response:', response.data); 
 
@@ -30,7 +30,7 @@ const LoginPage = () => {
 
     } catch (error) {
       // Debugging line to check error
-      console.log('Error during login:', error.response ? error.response.data : error.message); 
+      console.error('Error during login:', error.response ? error.response.data : error.message); 
       alert('Invalid credentials');
     }
   };
